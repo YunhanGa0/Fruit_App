@@ -4,17 +4,52 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center">
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/fruitInitial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="160sp"
+        android:layout_gravity="center"
+        android:textColor="#FF5722" />
 
     <ImageView
         android:id="@+id/fruitImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        android:layout_gravity="center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/fruitName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="120sp"
+            android:textColor="#FF5722"
+            android:gravity="center" />
+
+        <ImageButton
+            android:id="@+id/soundButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/lb"
+            android:contentDescription="Play sound"
+            android:background="?attr/selectableItemBackground"/>
+    </LinearLayout>
 
     <TextView
-        android:id="@+id/fruitName"
-        android:layout_width="wrap_content"
+        android:id="@+id/fruitDescription"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="24sp"
-        android:textColor="@android:color/holo_blue_dark"/>
+        android:textSize="80sp"
+        android:textColor="#4CAF50"
+        android:layout_marginTop="16dp" />
 </LinearLayout>

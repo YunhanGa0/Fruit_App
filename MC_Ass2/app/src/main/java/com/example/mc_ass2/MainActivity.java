@@ -10,8 +10,19 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private String[] fruits = {"Apple", "Banana", "Cherry"};
-    private int[] fruitImages = {R.drawable.apple, R.drawable.banana, R.drawable.mango};
+    private String[] fruits = {
+        "Apple", "Banana", "Cherry", 
+        "Lemon", "Litchi", "Mango", 
+        "Mangosteen", "Orange", "Pear", 
+        "Pineapple", "Strawberry", "Watermelon"
+    };
+
+    private int[] fruitImages = {
+        R.drawable.apple, R.drawable.banana, R.drawable.cherry,
+        R.drawable.lemon, R.drawable.litchi, R.drawable.mango, 
+        R.drawable.mangosteen, R.drawable.orange, R.drawable.pear, 
+        R.drawable.pineapple, R.drawable.strawberry, R.drawable.watermelon
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

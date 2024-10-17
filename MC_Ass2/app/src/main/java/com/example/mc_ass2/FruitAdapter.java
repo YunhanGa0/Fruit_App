@@ -43,6 +43,12 @@ public class FruitAdapter extends BaseAdapter {
         ImageView imageView = convertView.findViewById(R.id.fruitImage);
         TextView textView = convertView.findViewById(R.id.fruitName);
 
+        // 设置图片大小
+        ViewGroup.LayoutParams params = imageView.getLayoutParams();
+        params.width = 700; // 设置宽度为200
+        params.height = 700; // 设置高度为200
+        imageView.setLayoutParams(params);
+
         imageView.setImageResource(images[position]);
         textView.setText(fruits[position]);
 

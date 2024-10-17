@@ -1,19 +1,24 @@
 <!-- app/src/main/res/layout/grid_item.xml -->
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    android:padding="16dp">
 
     <ImageView
         android:id="@+id/fruitImage"
-        android:layout_width="100dp"
-        android:layout_height="100dp"/>
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop" />
 
     <TextView
         android:id="@+id/fruitName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="18sp"/>
+        android:textSize="40sp"
+        android:textColor="#03A9F4"
+        android:gravity="center"
+        android:fontFamily="@font/rainbowparty" />
 </LinearLayout>
