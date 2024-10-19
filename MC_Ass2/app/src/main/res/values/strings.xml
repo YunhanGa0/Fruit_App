@@ -1,3 +1,36 @@
 <resources>
-    <string name="app_name">MC_Ass2</string>
+    <string name="app_name">Fruit App</string>
+    <string name="fruit_list_title">Fruit List</string>
+    <string name="fruit_description">Fruit Description</string>
+    <string name="play_sound">Play Sound</string>
+    <string name="switch_language">Switch Language</string>
+
+    <string name="apple_name">Apple</string>
+    <string name="banana_name">Banana</string>
+    <string name="cherry_name">Cherry</string>
+    <string name="lemon_name">Lemon</string>
+    <string name="litchi_name">Litchi</string>
+    <string name="mango_name">Mango</string>
+    <string name="mangosteen_name">Mangosteen</string>
+    <string name="orange_name">Orange</string>
+    <string name="pear_name">Pear</string>
+    <string name="pineapple_name">Pineapple</string>
+    <string name="strawberry_name">Strawberry</string>
+    <string name="watermelon_name">Watermelon</string>
+
+
+    <string name="apple_description">An apple is a crisp and sweet fruit, rich in vitamins and fiber.</string>
+    <string name="banana_description">A banana is a soft fruit that is high in potassium and energy, perfect for post-workout.</string>
+    <string name="cherry_description">A cherry is a small, sweet fruit often used in desserts and jams.</string>
+    <string name="lemon_description">A lemon is a sour fruit commonly used in drinks and flavoring, rich in vitamin C.</string>
+    <string name="litchi_description">A lychee is a tropical fruit with juicy, tender flesh and a sweet flavor.</string>
+    <string name="mango_description">The mango is known as the \'king of fruits\' for its deliciously sweet flesh.</string>
+    <string name="mangosteen_description">The mangosteen is a purple fruit with a white interior, known for its unique and sweet flavor.</string>
+    <string name="orange_description">An orange is a juicy fruit rich in vitamin C, great for eating fresh or juicing.</string>
+    <string name="pear_description">A pear is a water-rich fruit with a crisp texture, perfect for eating fresh or in desserts.</string>
+    <string name="pineapple_description">A pineapple is a tropical fruit that is sweet and tangy, often used in salads and drinks.</string>
+    <string name="strawberry_description">A strawberry is a small red fruit that is sweet and rich in antioxidants.</string>
+    <string name="watermelon_description">A watermelon is a summer fruit that is hydrating and refreshing.</string>
+
+    <string name="default_fruit_description">This is a delicious fruit.</string>
 </resources>

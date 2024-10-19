@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">水果应用</string>
+    <string name="fruit_list_title">水果列表</string>
+    <string name="play_sound">播放声音</string>
+    <string name="switch_language">切换语言</string>
+
+    <string name="apple_name">苹果</string>
+    <string name="banana_name">香蕉</string>
+    <string name="cherry_name">樱桃</string>
+    <string name="lemon_name">柠檬</string>
+    <string name="litchi_name">荔枝</string>
+    <string name="mango_name">芒果</string>
+    <string name="mangosteen_name">山竹</string>
+    <string name="orange_name">橙子</string>
+    <string name="pear_name">梨</string>
+    <string name="pineapple_name">菠萝</string>
+    <string name="strawberry_name">草莓</string>
+    <string name="watermelon_name">西瓜</string>
+
+
+    <string name="apple_description">苹果是一种脆甜的水果，富含维生素和纤维。</string>
+    <string name="banana_description">香蕉是一种柔软的水果，富含钾和能量，适合运动后食用。</string>
+    <string name="cherry_description">樱桃是一种小而甜的水果，常用于甜点和果酱。</string>
+    <string name="lemon_description">柠檬是一种酸味水果，常用于饮料和调味，富含维生素C。</string>
+    <string name="litchi_description">荔枝是一种热带水果，果肉多汁，口感甜美。</string>
+    <string name="mango_description">芒果被称为“水果之王”，因其美味的果肉而闻名。</string>
+    <string name="mangosteen_description">山竹是一种紫色水果，内部是白色的，因其独特的甜味而受到喜爱。</string>
+    <string name="orange_description">橙子是一种多汁的水果，富含维生素C，适合生吃或榨汁。</string>
+    <string name="pear_description">梨是一种水分丰富的水果，口感脆嫩，适合生吃或做甜点。</string>
+    <string name="pineapple_description">菠萝是一种热带水果，味道甜酸，常用于沙拉和饮料。</string>
+    <string name="strawberry_description">草莓是一种小红果，味道甜美，富含抗氧化剂。</string>
+    <string name="watermelon_description">西瓜是一种夏季水果，水分丰富，清爽可口。</string>
+
+    <string name="default_fruit_description">这是一种美味的水果。</string>
+</resources>

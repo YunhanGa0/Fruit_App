@@ -23,49 +23,10 @@ public class FruitDetailActivity extends AppCompatActivity {
         String fruitName = getIntent().getStringExtra("fruitName");
         int fruitImage = getIntent().getIntExtra("fruitImage", 0);
         
-        // Add fruit descriptions
-        String fruitDescription;
-        switch (fruitName) {
-            case "Apple":
-                fruitDescription = "An apple is a crisp and sweet fruit, rich in vitamins and fiber.";
-                break;
-            case "Banana":
-                fruitDescription = "A banana is a soft fruit that is high in potassium and energy, perfect for post-workout.";
-                break;
-            case "Cherry":
-                fruitDescription = "A cherry is a small, sweet fruit often used in desserts and jams.";
-                break;
-            case "Lemon":
-                fruitDescription = "A lemon is a sour fruit commonly used in drinks and flavoring, rich in vitamin C.";
-                break;
-            case "Litchi":
-                fruitDescription = "A lychee is a tropical fruit with juicy, tender flesh and a sweet flavor.";
-                break;
-            case "Mango":
-                fruitDescription = "The mango is known as the 'king of fruits' for its deliciously sweet flesh.";
-                break;
-            case "Mangosteen":
-                fruitDescription = "The mangosteen is a purple fruit with a white interior, known for its unique and sweet flavor.";
-                break;
-            case "Orange":
-                fruitDescription = "An orange is a juicy fruit rich in vitamin C, great for eating fresh or juicing.";
-                break;
-            case "Pear":
-                fruitDescription = "A pear is a water-rich fruit with a crisp texture, perfect for eating fresh or in desserts.";
-                break;
-            case "Pineapple":
-                fruitDescription = "A pineapple is a tropical fruit that is sweet and tangy, often used in salads and drinks.";
-                break;
-            case "Strawberry":
-                fruitDescription = "A strawberry is a small red fruit that is sweet and rich in antioxidants.";
-                break;
-            case "Watermelon":
-                fruitDescription = "A watermelon is a summer fruit that is hydrating and refreshing.";
-                break;
-            default:
-                fruitDescription = "This is a delicious fruit.";
-                break;
-        }
+        Log.d("FruitDetailActivity", "Received fruit name: " + fruitName); // 添加日志
+
+        // 使用字符串资源设置水果描述
+        String fruitDescription = getFruitDescription(fruitName);
 
         TextView nameTextView = findViewById(R.id.fruitName);
         ImageView imageView = findViewById(R.id.fruitImage);
@@ -73,7 +34,7 @@ public class FruitDetailActivity extends AppCompatActivity {
         TextView descriptionTextView = findViewById(R.id.fruitDescription);
         ImageButton soundButton = findViewById(R.id.soundButton); // 获取喇叭按钮
 
-        nameTextView.setText(fruitName);
+        nameTextView.setText(getFruitName(fruitName)); // 使用字符串资源设置水果名称
         imageView.setImageResource(fruitImage);
         initialTextView.setText(fruitName.substring(0, 1).toUpperCase());
         descriptionTextView.setText(fruitDescription); // Set the fruit description
@@ -92,6 +53,55 @@ public class FruitDetailActivity extends AppCompatActivity {
                 playSound(fruitName.toLowerCase());
             }
         });
+    }
+
+    private String getFruitName(String fruitName) {
+        switch (fruitName) {
+            case "Apple": return getString(R.string.apple_name);
+            case "Banana": return getString(R.string.banana_name);
+            case "Cherry": return getString(R.string.cherry_name);
+            case "Lemon": return getString(R.string.lemon_name);
+            case "Litchi": return getString(R.string.litchi_name);
+            case "Mango": return getString(R.string.mango_name);
+            case "Mangosteen": return getString(R.string.mangosteen_name);
+            case "Orange": return getString(R.string.orange_name);
+            case "Pear": return getString(R.string.pear_name);
+            case "Pineapple": return getString(R.string.pineapple_name);
+            case "Strawberry": return getString(R.string.strawberry_name);
+            case "Watermelon": return getString(R.string.watermelon_name);
+            default: return fruitName; // 默认返回原名称
+        }
+    }
+
+    private String getFruitDescription(String fruitName) {
+        switch (fruitName) {
+            case "Apple":
+                return getString(R.string.apple_description);
+            case "Banana":
+                return getString(R.string.banana_description);
+            case "Cherry":
+                return getString(R.string.cherry_description);
+            case "Lemon":
+                return getString(R.string.lemon_description);
+            case "Litchi":
+                return getString(R.string.litchi_description);
+            case "Mango":
+                return getString(R.string.mango_description);
+            case "Mangosteen":
+                return getString(R.string.mangosteen_description);
+            case "Orange":
+                return getString(R.string.orange_description);
+            case "Pear":
+                return getString(R.string.pear_description);
+            case "Pineapple":
+                return getString(R.string.pineapple_description);
+            case "Strawberry":
+                return getString(R.string.strawberry_description);
+            case "Watermelon":
+                return getString(R.string.watermelon_description);
+            default:
+                return getString(R.string.default_fruit_description);
+        }
     }
 
     private void playSound(String fruit) {
@@ -126,6 +136,7 @@ public class FruitDetailActivity extends AppCompatActivity {
             Log.e("FruitDetailActivity", "Sound resource not found for: " + fruit);
         }
     }
+
 
 
     @Override
