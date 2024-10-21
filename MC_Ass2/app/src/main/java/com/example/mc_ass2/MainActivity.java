@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
-import android.util.Log;
+import android.widget.Switch;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -59,66 +59,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // 添加语言切换按钮的点击事件
-        Button languageButton = findViewById(R.id.languageButton);
-        languageButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                toggleLanguage();
+        // 设置语言切换的 Switch
+        Switch languageSwitch = findViewById(R.id.languageSwitch);
+        languageSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked) {
+                setLocale("zh"); // 切换到中文
+            } else {
+                setLocale("en"); // 切换到英文
             }
+            updateFruitNames(); // 更新水果名称
         });
-    }
-
-    private void toggleLanguage() {
-        // 获取当前语言
-        Locale currentLocale = getResources().getConfiguration().locale;
-        String language = currentLocale.getLanguage();
-        Log.d("MainActivity", "Current language: " + language);
-
-        // 切换语言
-        if (language.equals("en")) {
-            setLocale("zh"); // 切换到中文
-            Log.d("MainActivity", "Switching to Chinese");
-        } else {
-            setLocale("en"); // 切换到英文
-            Log.d("MainActivity", "Switching to English");
-        }
-
-        // 更新水果名称和描述
-        updateFruitNamesAndDescriptions();
-
-        // 重新启动活动以应用语言更改
-        recreate();
-    }
-
-    private void updateFruitNamesAndDescriptions() {
-        // 更新水果名称
-        for (int i = 0; i < fruits.length; i++) {
-            fruits[i] = getFruitName(fruits[i]);
-        }
-        adapter.notifyDataSetChanged(); // 通知适配器数据已更改
-    }
-
-    private String getFruitName(String fruitName) {
-        if (Locale.getDefault().getLanguage().equals("zh")) {
-            switch (fruitName) {
-                case "Apple": return getString(R.string.apple_name);
-                case "Banana": return getString(R.string.banana_name);
-                case "Cherry": return getString(R.string.cherry_name);
-                case "Lemon": return getString(R.string.lemon_name);
-                case "Litchi": return getString(R.string.litchi_name);
-                case "Mango": return getString(R.string.mango_name);
-                case "Mangosteen": return getString(R.string.mangosteen_name);
-                case "Orange": return getString(R.string.orange_name);
-                case "Pear": return getString(R.string.pear_name);
-                case "Pineapple": return getString(R.string.pineapple_name);
-                case "Strawberry": return getString(R.string.strawberry_name);
-                case "Watermelon": return getString(R.string.watermelon_name);
-                default: return fruitName; // 默认返回原名称
-            }
-        } else {
-            return fruitName; // 认返回英文名称
-        }
     }
 
     private void setLocale(String lang) {
@@ -126,5 +76,22 @@ public class MainActivity extends AppCompatActivity {
         Locale.setDefault(locale);
         getResources().getConfiguration().setLocale(locale);
         getResources().updateConfiguration(getResources().getConfiguration(), getResources().getDisplayMetrics());
+    }
+
+    private void updateFruitNames() {
+        // 更新水果名称
+        fruits[0] = getString(R.string.apple_name);
+        fruits[1] = getString(R.string.banana_name);
+        fruits[2] = getString(R.string.cherry_name);
+        fruits[3] = getString(R.string.lemon_name);
+        fruits[4] = getString(R.string.litchi_name);
+        fruits[5] = getString(R.string.mango_name);
+        fruits[6] = getString(R.string.mangosteen_name);
+        fruits[7] = getString(R.string.orange_name);
+        fruits[8] = getString(R.string.pear_name);
+        fruits[9] = getString(R.string.pineapple_name);
+        fruits[10] = getString(R.string.strawberry_name);
+        fruits[11] = getString(R.string.watermelon_name);
+        adapter.notifyDataSetChanged(); // 通知适配器数据已更改
     }
 }

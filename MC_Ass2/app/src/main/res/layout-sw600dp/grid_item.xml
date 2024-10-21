@@ -1,4 +1,4 @@
-<!-- app/src/main/res/layout/grid_item.xml -->
+<!-- app/src/main/res/layout-sw600dp/grid_item.xml -->
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"

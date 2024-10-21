@@ -30,13 +30,11 @@
                 android:textColor="#FFE922"
                 android:fontFamily="@font/sankei_cute_popanime_2" />
 
-            <Button
-                android:id="@+id/languageButton"
+            <Switch
+                android:id="@+id/languageSwitch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="en/zh"
-                android:background="?attr/selectableItemBackground"
-                android:textColor="#FFE922"/>
+                android:checked="false" /> <!-- 默认设置为英文 -->
         </LinearLayout>
     </androidx.appcompat.widget.Toolbar>
 

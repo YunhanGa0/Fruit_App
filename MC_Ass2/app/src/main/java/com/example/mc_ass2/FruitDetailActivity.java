@@ -40,9 +40,7 @@ public class FruitDetailActivity extends AppCompatActivity {
         descriptionTextView.setText(fruitDescription); // Set the fruit description
 
         // 设置字体颜色和大小
-        nameTextView.setTextSize(28); // 增大字体
         nameTextView.setTextColor(Color.parseColor("#FF5722")); // 明亮的橙色
-        descriptionTextView.setTextSize(20); // 增大字体
         descriptionTextView.setTextColor(Color.parseColor("#4CAF50")); // 明亮的绿色
 
         // 设置喇叭按钮的点击事件
@@ -136,6 +134,7 @@ public class FruitDetailActivity extends AppCompatActivity {
             Log.e("FruitDetailActivity", "Sound resource not found for: " + fruit);
         }
     }
+
 
 
 

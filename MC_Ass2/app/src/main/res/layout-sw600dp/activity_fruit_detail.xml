@@ -1,56 +1,74 @@
-<!-- app/src/main/res/layout/activity_fruit_detail.xml -->
+<!-- app/src/main/res/layout-sw600dp/activity_fruit_detail.xml -->
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:padding="24dp">
 
-    <TextView
-        android:id="@+id/fruitInitial"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="200sp"
-        android:layout_gravity="center"
-        android:textColor="#FF5722" />
-
-    <ImageView
-        android:id="@+id/fruitImage"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:scaleType="fitCenter"
-        android:layout_gravity="center" />
-
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:layout_marginTop="16dp">
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"> <!-- 左侧布局 -->
 
         <TextView
-            android:id="@+id/fruitName"
-            android:layout_width="0dp"
+            android:id="@+id/fruitInitial"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="80sp"
-            android:textColor="#FF5722"
-            android:gravity="center" />
+            android:textSize="250sp"
+            android:textColor="#FF5722" />
 
-        <ImageButton
-            android:id="@+id/soundButton"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:src="@drawable/lb"
-            android:contentDescription="Play sound"
-            android:background="?attr/selectableItemBackground"/>
+        <ImageView
+            android:id="@+id/fruitImage"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/fruitDescription"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="60sp"
-        android:textColor="#4CAF50"
-        android:layout_marginTop="16dp" />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/fruitName"
+                android:layout_width="0dp"
+                android:layout_height="420dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#FF5722"
+                android:textSize="100sp" />
+
+            <ImageButton
+                android:id="@+id/soundButton"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="?attr/selectableItemBackground"
+                android:contentDescription="Play sound"
+                android:src="@drawable/lb" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/fruitDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:textColor="#4CAF50"
+            android:textSize="50sp" />
+    </LinearLayout>
 </LinearLayout>
