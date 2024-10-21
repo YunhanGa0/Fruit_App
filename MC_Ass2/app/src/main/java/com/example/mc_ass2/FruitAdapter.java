@@ -9,29 +9,29 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class FruitAdapter extends BaseAdapter {
-    private Context context;
-    private int[] images;
-    private String[] fruitNames; // 添加水果名称数组
+    private Context context; // Declare context
+    private int[] images; // Declare an array for images
+    private String[] fruitNames; // Declare an array for fruit names
 
     public FruitAdapter(Context context, String[] fruitNames, int[] images) {
-        this.context = context;
-        this.fruitNames = fruitNames; // 初始化水果名称数组
-        this.images = images;
+        this.context = context; // Initialize context
+        this.fruitNames = fruitNames; // Initialize fruit names array
+        this.images = images; // Initialize images array
     }
 
     @Override
     public int getCount() {
-        return images.length; // 返回水果数量
+        return images.length; // Return the number of fruits
     }
 
     @Override
     public Object getItem(int position) {
-        return fruitNames[position]; // 返回水果名称
+        return fruitNames[position]; // Return the fruit name at the specified position
     }
 
     @Override
     public long getItemId(int position) {
-        return position;
+        return position; // Return the position as the item ID
     }
 
     @Override
@@ -43,18 +43,18 @@ public class FruitAdapter extends BaseAdapter {
         ImageView imageView = convertView.findViewById(R.id.fruitImage);
         TextView textView = convertView.findViewById(R.id.fruitName);
 
-        // 设置图片大小
+        // Set image size
         ViewGroup.LayoutParams params = imageView.getLayoutParams();
-        params.width = 700; // 设置宽度为700
-        params.height = 700; // 设置高度为700
+        params.width = 700; // Set width to 700
+        params.height = 700; // Set height to 700
         imageView.setLayoutParams(params);
 
-        imageView.setImageResource(images[position]);
+        imageView.setImageResource(images[position]); // Set the image resource
 
-        // 根据位置获取水果名称
-        String fruitName = fruitNames[position]; // 直接使用水果名称数组
-        textView.setText(fruitName); // 设置水果名称
+        // Get the fruit name based on the position
+        String fruitName = fruitNames[position]; // Directly use the fruit names array
+        textView.setText(fruitName); // Set the fruit name
 
-        return convertView;
+        return convertView; // Return the completed view
     }
 }

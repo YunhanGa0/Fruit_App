@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Fruit App</string>
-    <string name="fruit_list_title">Fruit List</string>
-    <string name="fruit_description">Fruit Description</string>
-    <string name="play_sound">Play Sound</string>
+    <string name="fruit_list">Fruit List</string>
+
+
     <string name="switch_language">Switch Language</string>
 
     <string name="apple_name">Apple</string>

@@ -10,9 +10,10 @@
         android:id="@+id/fruitInitial"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="160sp"
+        android:textSize="140sp"
         android:layout_gravity="center"
-        android:textColor="#FF5722" />
+        android:textColor="#FF5722"
+        android:fontFamily="@font/sankei_cute_popanime_2"/>
 
     <ImageView
         android:id="@+id/fruitImage"
@@ -32,9 +33,10 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="120sp"
+            android:textSize="60sp"
             android:textColor="#FF5722"
-            android:gravity="center" />
+            android:gravity="center"
+            android:fontFamily="@font/sankei_cute_popanime_2"/>
 
         <ImageButton
             android:id="@+id/soundButton"
@@ -49,7 +51,7 @@
         android:id="@+id/fruitDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="80sp"
+        android:textSize="30sp"
         android:textColor="#4CAF50"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="16dp"/>
 </LinearLayout>

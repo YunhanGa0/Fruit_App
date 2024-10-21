@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">水果应用</string>
-    <string name="fruit_list_title">水果列表</string>
-    <string name="play_sound">播放声音</string>
+    <string name="fruit_list">水果列表</string>
     <string name="switch_language">切换语言</string>
 
     <string name="apple_name">苹果</string>
